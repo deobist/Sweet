@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munnalal Sweets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="contact-info">📞 +91 9660086877 | ✉️ info@munnalalsweets.com</span>
+            <span class="promo-text">Free delivery on orders above ₹1999 | 10% off on orders above ₹2999</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header visible">
+        <div class="header-top">
+            <div class="header-logo">
+                <img src="icons/Logo.jpg" alt="Munnalal Sweets Logo" class="logo">
+            </div>
+            <div class="header-actions">
+                <div class="search-container">
+                    <img src="icons/Search.png" alt="Search" class="search-icon" id="search-icon">
+                    <input type="text" id="header-search-input" class="search-input" placeholder="Search sweets, namkeen, gifts...">
+                </div>
+                <div class="contact-us">
+                    <a href="Contacts/contact.html">
+                        <img src="icons/Contact.png" alt="Contact" class="contact-icon">
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <div class="nav-ribbon">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="Sweets/sweets.html">Sweets <span class="dropdown-icon">⌄</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Sweets/sweets.html#rajasthani-special">Rajasthani Special</a></li>
+                            <li><a href="Sweets/sweets.html#dry-fruits-sweets">Dry Fruits Sweets</a></li>
+                            <li><a href="Sweets/sweets.html#desi-ghee-sweets">Desi Ghee Sweets</a></li>
+                            <li><a href="Sweets/sweets.html#milk-sweet">Milk Sweet</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Namkeen/namkeen.html">Namkeen <span class="dropdown-icon">⌄</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Namkeen/namkeen.html#mixture">Mixture</a></li>
+                            <li><a href="Namkeen/namkeen.html#rajasthani-mix">Rajasthani Mix</a></li>
+                            <li><a href="Namkeen/namkeen.html#maida-snacks">Maida Snacks</a></li>
+                            <li><a href="Namkeen/namkeen.html#dry-fruit-namkeen">Dry Fruit Namkeen</a></li>
+                            <li><a href="Namkeen/namkeen.html#wafers">Wafers</a></li>
+                            <li><a href="Namkeen/namkeen.html#roasted">Roasted</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Speciality/speciality.html">Specialties <span class="dropdown-icon">⌄</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Speciality/speciality.html#best-sellers">Best Sellers</a></li>
+                            <li><a href="Speciality/speciality.html#festive-special">Festive Special</a></li>
+                            <li><a href="Speciality/speciality.html#signature-combo">Signature Combo</a></li>
+                            <li><a href="Speciality/speciality.html#rajasthani-special">Rajasthani Special</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="Gift/gift.html">Gifting <span class="dropdown-icon">⌄</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Gift/gift.html#wedding-specials">Wedding Specials</a></li>
+                            <li><a href="Gift/gift.html#corporate-gifting">Corporate Gifting</a></li>
+                            <li><a href="Gift/gift.html#popular-combos">Popular Combos</a></li>
+                            <li><a href="Gift/gift.html#festive-specials">Festive Specials</a></li>
+                            <li><a href="Gift/gift.html#hampers">Hampers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="About/about.html">About Us</a></li>
+                    <li><a href="Contacts/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First-Time Visitor Popup -->
+    <div class="popup-overlay" id="welcome-popup">
+        <div class="popup-card">
+            <button class="close-btn" id="close-popup">×</button>
+          <!--<img src="images/Logo.jpg" alt="Munnalal Sweets Logo" class="popup-logo">-->  
+            <h3>Welcome to Munnalal Sweets</h3>
+            <p>Join our family and savor the taste of Rajasthan!</p>
+            <form id="welcome-form" class="welcome-form">
+                <label for="user-name">Name *</label>
+                <input type="text" id="user-name" name="name" required>
+                <label for="user-contact">Contact No. *</label>
+                <input type="tel" id="user-contact" name="contact" pattern="[0-9]{10}" required>
+                <label for="user-state">State *</label>
+                <select id="user-state" name="state" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Delhi">Delhi</option>
+                    <!-- Add more states as needed -->
+                </select>
+                <label for="user-city">City *</label>
+                <select id="user-city" name="city" required>
+                    <option value="" disabled selected>Select City</option>
+                </select>
+                <label for="user-email">Email (Optional)</label>
+                <input type="email" id="user-email" name="email">
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Running Ad -->
+    <section class="running-ad">
+        <p>Serving the taste of Rajasthan since 1980 and building the trust everyday.</p>
+    </section>
+
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/4498091.jpg" alt="Slide 1" class="slide active">
+            <img src="images/slider 2.jpeg" alt="Slide 2" class="slide">
+            <img src="images/4498091.jpg" alt="Slide 3" class="slide">
+        </div>
+    </div>
+
+    <!-- Specialties Section -->
+    <section id="specialties">
+        <h2>Our Specialties</h2>
+        <div class="specialties-container">
+            <button class="nav-button" id="prevBtn">‹</button>
+            <div class="solar-system">
+                <div class="sweet-item" data-section="signature-combo">
+                    <a href="Speciality/speciality.html#signature-combo">
+                        <img src="images/combos.avif" alt="Signature Combo">
+                        <p>Signature Combo</p>
+                    </a>
+                </div>
+                <div class="sweet-item" data-section="rajasthani-special">
+                    <a href="Speciality/speciality.html#rajasthani-special">
+                        <img src="images/rajasthani.avif" alt="Rajasthani Special">
+                        <p>Rajasthani Special</p>
+                    </a>
+                </div>
+                <div class="sweet-item" data-section="best-seller">
+                    <a href="Speciality/speciality.html#best-sellers">
+                        <img src="images/best seller.avif" alt="Best Seller">
+                        <p>Best Seller</p>
+                    </a>
+                </div>
+                <div class="sweet-item" data-section="festival-special">
+                    <a href="Speciality/speciality.html#festive-special">
+                        <img src="images/festive.avif" alt="Festival Special">
+                        <p>Festival Special</p>
+                    </a>
+                </div>
+            </div>
+            <button class="nav-button" id="nextBtn">›</button>
+        </div>
+    </section>
+
+    <!-- Sweets Section -->
+    <section id="order-sweets">
+        <h2>Shop Our Sweets</h2>
+        <div class="filter-bar">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="traditional">Traditional</button>
+            <button class="filter-btn" data-filter="festive">Festive</button>
+            <button class="filter-btn" data-filter="premium">Premium</button>
+        </div>
+        <div class="sweets-container">
+            <div class="sweet-card" data-category="traditional all">
+                <img src="Images/ghewar.jpg" alt="Ghewar">
+                <h3>Ghewar</h3>
+                <p class="sweet-price">₹250 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="festive all">
+                <img src="Images/rasgulla.jpg" alt="Rasgulla">
+                <h3>Rasgulla</h3>
+                <p class="sweet-price">₹200 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="traditional all">
+                <img src="Images/mawa-kachori.jpg" alt="Mawa Kachori">
+                <h3>Mawa Kachori</h3>
+                <p class="sweet-price">₹350 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="premium all">
+                <img src="Images/kaju-katli.jpeg" alt="Kaju Katli">
+                <h3>Kaju Katli</h3>
+                <p class="sweet-price">₹800 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="festive all">
+                <img src="Images/motichoor-ladoo.webp" alt="Motichoor Ladoo">
+                <h3>Motichoor Ladoo</h3>
+                <p class="sweet-price">₹300 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="traditional all">
+                <img src="Images/besan-barfi.jpeg" alt="Besan Barfi">
+                <h3>Besan Barfi</h3>
+                <p class="sweet-price">₹280 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="festive all">
+                <img src="Images/jalebi.webp" alt="Jalebi">
+                <h3>Jalebi</h3>
+                <p class="sweet-price">₹180 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="traditional all">
+                <img src="Images/balushahi.jpg" alt="Balushahi">
+                <h3>Balushahi</h3>
+                <p class="sweet-price">₹260 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="premium all">
+                <img src="Images/peda.jpeg" alt="Peda">
+                <h3>Peda</h3>
+                <p class="sweet-price">₹320 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="sweet-card" data-category="festive all">
+                <img src="Images/malpua.jpg" alt="Malpua">
+                <h3>Malpua</h3>
+                <p class="sweet-price">₹350 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="no-results" style="display: none;">No results found</div>
+        </div>
+        <a href="Sweets/sweets.html" class="see-more-btn">View More</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/WhatsApp Image 2025-03-16 at 09.54.27_be29b40d copy.jpg" alt="About Munnalal Sweets" class="about-img">
+            </div>
+            <div class="about-text">
+                <h2>About Munnalal Sweets</h2>
+                <p>Founded in the heart of Jaipur, Munnalal Sweets is a celebration of Rajasthan’s rich culinary heritage. Since our humble beginnings, we’ve crafted authentic sweets and namkeen with love, tradition, and the finest ingredients. Our recipes, passed down through generations, blend time-honored techniques with the vibrant flavors of desi ghee, dry fruits, and aromatic spices.</p>
+                <p>At Munnalal Sweets, we believe in spreading joy through every bite. From our iconic Rajasthani specialties to festive hampers and corporate gifting, we cater to every occasion with unmatched quality. Our commitment to excellence has made us a beloved name across India, trusted for authenticity and taste.</p>
+                <p>Join us in savoring the essence of Rajasthan, where every sweet tells a story of tradition, passion, and community. Visit our store or order online to experience the magic of Munnalal Sweets!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Namkeen Section -->
+    <section id="namkeen">
+        <h2>Explore Our Namkeen</h2>
+        <div class="filter-bar">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="spicy">Spicy</button>
+            <button class="filter-btn" data-filter="roasted">Roasted</button>
+            <button class="filter-btn" data-filter="rajasthani-mix">Rajasthani Mix</button>
+        </div>
+        <div class="namkeen-container">
+            <div class="namkeen-card" data-category="spicy all">
+                <img src="images/Namkeen All.avif" alt="Bikaneri Bhujia">
+                <h3>Bikaneri Bhujia</h3>
+                <p class="namkeen-price">₹150 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="namkeen-card" data-category="rajasthani-mix all">
+                <img src="images/Namkeen All.avif" alt="Mixture">
+                <h3>Mixture</h3>
+                <p class="namkeen-price">₹120 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="namkeen-card" data-category="roasted all">
+                <img src="images/Namkeen All.avif" alt="Roasted Almonds">
+                <h3>Roasted Almonds</h3>
+                <p class="namkeen-price">₹600 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="namkeen-card" data-category="spicy all">
+                <img src="images/Namkeen All.avif" alt="Masala Wafers">
+                <h3>Masala Wafers</h3>
+                <p class="namkeen-price">₹100 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="namkeen-card" data-category="rajasthani-mix all">
+                <img src="images/Namkeen All.avif" alt="Dal Moth">
+                <h3>Dal Moth</h3>
+                <p class="namkeen-price">₹140 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="namkeen-card" data-category="roasted all">
+                <img src="images/Namkeen All.avif" alt="Roasted Cashews">
+                <h3>Roasted Cashews</h3>
+                <p class="namkeen-price">₹700 per kg</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="no-results" style="display: none;">No results found</div>
+        </div>
+        <a href="Namkeen/namkeen.html" class="see-more-btn">View More</a>
+    </section>
+
+    <!-- Gifting Section -->
+    <section id="gifting">
+        <h2>Our Gifting Collections</h2>
+        <div class="filter-bar">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Wedding</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="festive">Festive</button>
+        </div>
+        <div class="gift-container">
+            <div class="gift-card" data-category="wedding all">
+                <img src="images/Gift All.jpeg" alt="Abhinandan">
+                <div class="gift-text">
+                    <h3>Abhinandan</h3>
+                    <p class="gift-subtitle">The Wedding Box</p>
+                    <p class="gift-price">₹4000</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="corporate all">
+                <img src="images/Gift All.jpeg" alt="Shubhkaamna">
+                <div class="gift-text">
+                    <h3>Shubhkaamna</h3>
+                    <p class="gift-subtitle">Congratulatory Gift</p>
+                    <p class="gift-price">₹2000</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="wedding all">
+                <img src="images/Gift All.jpeg" alt="Rishta">
+                <div class="gift-text">
+                    <h3>Rishta</h3>
+                    <p class="gift-subtitle">For Special Ones</p>
+                    <p class="gift-price">₹2500</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="corporate all">
+                <img src="images/Gift All.jpeg" alt="Uphaar">
+                <div class="gift-text">
+                    <h3>Uphaar</h3>
+                    <p class="gift-subtitle">For New Ones</p>
+                    <p class="gift-price">₹1800</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="festive all">
+                <img src="images/Gift All.jpeg" alt="Tyohar">
+                <div class="gift-text">
+                    <h3>Tyohar</h3>
+                    <p class="gift-subtitle">Festive Special</p>
+                    <p class="gift-price">₹2200</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="wedding all">
+                <img src="images/Gift All.jpeg" alt="Bandhan">
+                <div class="gift-text">
+                    <h3>Bandhan</h3>
+                    <p class="gift-subtitle">For New Startings</p>
+                    <p class="gift-price">₹2700</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="wedding all">
+                <img src="images/Gift All.jpeg" alt="Samarpan">
+                <div class="gift-text">
+                    <h3>Samarpan</h3>
+                    <p class="gift-subtitle">Eternal Bond</p>
+                    <p class="gift-price">₹3500</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="corporate all">
+                <img src="images/Gift All.jpeg" alt="Pragati">
+                <div class="gift-text">
+                    <h3>Pragati</h3>
+                    <p class="gift-subtitle">Prosperity Pack</p>
+                    <p class="gift-price">₹2000</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="festive all">
+                <img src="images/Gift All.jpeg" alt="Milan">
+                <div class="gift-text">
+                    <h3>Milan</h3>
+                    <p class="gift-subtitle">Sweet Harmony</p>
+                    <p class="gift-price">₹1500</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="festive all">
+                <img src="images/Gift All.jpeg" alt="Utsav">
+                <div class="gift-text">
+                    <h3>Utsav</h3>
+                    <p class="gift-subtitle">Celebration Box</p>
+                    <p class="gift-price">₹2500</p>
+                </div>
+            </div>
+            <div class="gift-card" data-category="wedding all">
+                <img src="images/Gift All.jpeg" alt="Sneha">
+                <div class="gift-text">
+                    <h3>Sneha</h3>
+                    <p class="gift-subtitle">Affection Hamper</p>
+                    <p class="gift-price">₹3000</p>
+                </div>
+            </div>
+            <div class="no-results" style="display: none;">No results found</div>
+        </div>
+        <a href="Gift/gift.html" class="see-more-btn">View More</a>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="customer-reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="reviewer-avatar">
+                    
+                </div>
+                <div class="review-stars">
+                    <span>★★★★★</span>
+                </div>
+                <p class="review-text">"Absolutely delicious sweets! The taste of Rajasthan in every bite!"</p>
+                <p class="reviewer-name">Ramesh Kumar</p>
+            </div>
+            <div class="review-card">
+                <div class="reviewer-avatar">
+                    
+                </div>
+                <div class="review-stars">
+                    <span>★★★★★</span>
+                </div>
+                <p class="review-text">"Authentic flavors and amazing quality. My go-to for festive sweets!"</p>
+                <p class="reviewer-name">Sunita Sharma</p>
+            </div>
+            <div class="review-card">
+                <div class="reviewer-avatar">
+                    
+                </div>
+                <div class="review-stars">
+                    <span>★★★★★</span>
+                </div>
+                <p class="review-text">"The best sweets shop in town! Always fresh and mouth-watering."</p>
+                <p class="reviewer-name">Amit Verma</p>
+            </div>
+            <div class="review-card">
+                <div class="reviewer-avatar">
+                    
+                </div>
+                <div class="review-stars">
+                    <span>★★★★★</span>
+                </div>
+                <p class="review-text">"Ordered for Diwali, and they were amazing! Will order again."</p>
+                <p class="reviewer-name">Priya Mehta</p>
+            </div>
+            <div class="review-card">
+                <div class="reviewer-avatar">
+                    
+                </div>
+                <div class="review-stars">
+                    <span>★★★★★</span>
+                </div>
+                <p class="review-text">"Best quality sweets with perfect sweetness. Highly recommended!"</p>
+                <p class="reviewer-name">Rajiv Singh</p>
+            </div>
+            <div class="review-card">
+                <div class="reviewer-avatar">
+                    
+                </div>
+                <div class="review-stars">
+                    <span>★★★★★</span>
+                </div>
+                <p class="review-text">"Their sweets remind me of my childhood! Just like grandma made."</p>
+                <p class="reviewer-name">Kavita Joshi</p>
+            </div>
+        </div>
+        <div class="review-nav">
+            <button id="prevReview">←</button>
+            <button id="nextReview">→</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="icons/Logo.jpg" alt="Munnalal Sweets Logo" class="footer-logo">
+                <p>Delivering authentic Rajasthani sweets since 1980.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 +91 9660086877</p>
+                <p>✉️ info@munnalalsweets.com</p>
+                <p>📍 Jaipur, Rajasthan</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#home">Home</a></p>
+                <p><a href="Sweets/sweets.html">Sweets</a></p>
+                <p><a href="Namkeen/namkeen.html">Namkeen</a></p>
+                <p><a href="Gift/gift.html">Gifting</a></p>
+                <p><a href="About/about.html">About Us</a></p>
+                <p><a href="Contacts/contact.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><img src="icons/whatsapp.png" alt="WhatsApp" class="social-icon"></a>
+                    <a href="#"><img src="icons/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="icons/Twitter.png" alt="Twitter" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Munnalal Sweets. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+    <div class="gift-ad" id="gift-ad">
+
+    <span>Gift Card</span>
+</div>
+
+<div class="popup-overlay" id="gift-ad-popup">
+    <div class="popup-card gift-ad-card">
+        <button class="close-btn" id="close-gift-popup">×</button>
+        <h3>Free Gift Card with Every Sweet Box!</h3>
+        <div class="gift-ad-content">
+            <div class="gift-ad-grid">
+                <div class="gift-ad-image">
+                    <img src="images/Gift Card.png" alt="Sample Gift Card" class="gift-card-sample" data-size="113">
+
+                </div>
+                <div class="gift-ad-text">
+                    <p>Make every moment unforgettable with Munnalal Sweets’ <strong>free customized gift cards</strong>, included with every box of sweets! Perfect for congratulating loved ones on special occasions or inviting guests to events like weddings, our gift cards add a heartfelt touch.</p>
+                    <p><strong>Why Our Gift Cards?</strong></p>
+                    <ul>
+                        <li>Personalized messages for birthdays, anniversaries, or promotions.</li>
+                        <li>Elegant designs for wedding invitations or festive greetings.</li>
+                        <li>Paired with authentic Rajasthani sweets for a memorable gift.</li>
+                        <li>Customizable for corporate gifting or special events.</li>
+                    </ul>
+                    <p>Contact us to create a unique gift card that reflects your sentiment, delivered with the rich flavors of Rajasthan!</p>
+                    <div class="gift-ad-contact">
+                        <p><strong>Contact Us:</strong></p>
+                        <p>📞 <a href="tel:+919660086877">+91 9660086877</a></p>
+                        <p>✉️ <a href="mailto:orders@munnalalsweets.com">orders@munnalalsweets.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
